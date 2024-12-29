@@ -32,15 +32,18 @@ public class DuringAttack : StateMachineBehaviour
 
                     if (!hitted)
                     {
-                        Collider[] hitColliders = Physics.OverlapSphere(hitBox.transform.position, 0.5f); // 1f is the radius
+                        Collider[] hitColliders = Physics.OverlapSphere(hitBox.transform.position, 0.1f); // 1f is the radius
 
                         foreach (var hitCollider in hitColliders)
                         {
-                            IDamageable damageable = hitCollider.GetComponent<IDamageable>();
-                            if (damageable != null && hitCollider.gameObject.tag != "Player")
+                            if (!hitCollider.isTrigger)
                             {
-                                damageable.TakeDamage(animator.gameObject, Attack._attack.damageBase * damageMulti);
-                                hitted = true;
+                                IDamageable damageable = hitCollider.GetComponent<IDamageable>();
+                                if (damageable != null && hitCollider.gameObject.tag != "Player" && hitCollider.gameObject.tag != "Untagged")
+                                {
+                                    damageable.TakeDamage(animator.gameObject, Attack._attack.damageBase * damageMulti);
+                                    hitted = true;
+                                }
                             }
                         }
                     }

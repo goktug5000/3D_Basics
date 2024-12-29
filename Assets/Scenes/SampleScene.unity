@@ -2099,7 +2099,7 @@ SphereCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
-  m_ProvidesContacts: 0
+  m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 12
@@ -2203,9 +2203,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2650c175c1408a74ab9a18048f954400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 50
+  hp: 40
   hpMax: 50
   hpRegen: 1
+  healthText: {fileID: 1999413793}
 --- !u!4 &463090594 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4416381259108642, guid: f7902c99c75cad34f934860c6b6ddd9e, type: 3}
@@ -7417,7 +7418,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 150
+  m_text: 40
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

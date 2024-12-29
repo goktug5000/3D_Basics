@@ -40,6 +40,21 @@ public class Attack : MonoBehaviour
         //RedDot(); // TODO: spell koyarsan aç geri
     }
 
+    void OnDrawGizmos()
+    {
+        if (PlayerConstantsHolder._playerConstantsHolder.hitBoxes.Length > 0)
+        {
+            foreach (var hitBox in PlayerConstantsHolder._playerConstantsHolder.hitBoxes)
+            {
+                if (hitBox != null)
+                {
+                    Gizmos.color = Color.red; // Set the color for the Gizmo
+                    Gizmos.DrawWireSphere(hitBox.transform.position, 0.1f); // Draw the overlap sphere
+                }
+            }
+        }
+    }
+
     public void SwichWeapon(WeaponSO weaponSO)
     {
         WeaponType = weaponSO.weaponType;
