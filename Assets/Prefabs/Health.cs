@@ -6,7 +6,7 @@ public abstract class Health : MonoBehaviour, IDamageable
     [SerializeField] private float hpMax;
     [SerializeField] private float hpRegen;
     private bool isImmune;
-    private bool dead;
+    public bool dead;
     private Animator anim;
 
     public void Start()
@@ -66,7 +66,8 @@ public abstract class Health : MonoBehaviour, IDamageable
         if (HP <= 0)
         {
             HP = 0;
-            anim.SetBool("dead", true);
+            Dead = true;
+            anim.SetTrigger("dead");
             Die();
         }
         else

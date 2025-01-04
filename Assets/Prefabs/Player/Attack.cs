@@ -42,7 +42,7 @@ public class Attack : MonoBehaviour
 
     void OnDrawGizmos()
     {
-        if (PlayerConstantsHolder._playerConstantsHolder.hitBoxes.Length > 0)
+        if (PlayerConstantsHolder._playerConstantsHolder?.hitBoxes.Length > 0)
         {
             foreach (var hitBox in PlayerConstantsHolder._playerConstantsHolder.hitBoxes)
             {

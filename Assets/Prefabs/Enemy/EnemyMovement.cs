@@ -9,6 +9,7 @@ public class EnemyMovement : MonoBehaviour
     private NavMeshAgent agent;
     private Animator enemyAnimator;
     private EnemyMeleeAttack enemyMeleeAttack;
+    private EnemyHealth enemyHealth;
 
     [SerializeField] private float stopDistance = 1.2f;
     public bool follow;
@@ -25,6 +26,7 @@ public class EnemyMovement : MonoBehaviour
         agent = myEnemyRoot.agent;
         enemyAnimator = myEnemyRoot.holderAnimator;
         enemyMeleeAttack = myEnemyRoot.enemyMeleeAttack;
+        enemyHealth = myEnemyRoot.enemyHealth;
 
         agent.stoppingDistance = stopDistance;
         agent.speed = movementSpeed;
@@ -32,8 +34,11 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
-        distance = agent.remainingDistance;
-        Movement();
+        if (!enemyHealth.dead)
+        {
+            distance = agent.remainingDistance;
+            Movement();
+        }
     }
 
     void Movement()

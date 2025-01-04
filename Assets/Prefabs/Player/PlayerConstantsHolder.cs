@@ -10,6 +10,7 @@ public class PlayerConstantsHolder : ConstantHolder
     [SerializeField] public Equipment playerEquipment;
     [SerializeField] public Inventory playerInventory;
     [SerializeField] public Movement playerMovement;
+    [SerializeField] public PlayerQuests playerQuests;
 
     [SerializeField] public CinemachineVirtualCamera virtualCameraTP;
     [SerializeField] public CinemachineVirtualCamera virtualCameraTPS;

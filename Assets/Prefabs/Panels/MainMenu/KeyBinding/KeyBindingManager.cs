@@ -30,6 +30,8 @@ public class KeyBindingManager : MonoBehaviour
 
         KeyBindings.KeyCodes.Add(KeyBindings.KeyCode_Attack1, KeyCode.Mouse0);
         KeyBindings.KeyCodes.Add(KeyBindings.KeyCode_Attack2, KeyCode.Mouse1);
+
+        KeyBindings.KeyCodes.Add(KeyBindings.KeyCode_Interaction, KeyCode.E);
     }
 
     public void ShowKeys()

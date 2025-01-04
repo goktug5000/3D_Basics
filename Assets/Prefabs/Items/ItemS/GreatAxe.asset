@@ -15,7 +15,7 @@ MonoBehaviour:
   objName: "Sava\u015F Baltas\u0131"
   shortDesc: 20 hasar
   desc: "balta uzun a\xE7\u0131klama"
-  objImage: {fileID: 21300000, guid: d48c285b0d1bc7c409b43ff18215dc57, type: 3}
+  objImage: {fileID: 21300000, guid: 8ebc2d0cfe956f84ab6b4448d9edc925, type: 3}
   singlePrice: 50
   itemPrefab: {fileID: 8825636113902328927, guid: 4591a79408bceef4e9f058264fbd7525, type: 3}
   head: 0

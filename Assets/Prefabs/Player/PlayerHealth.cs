@@ -16,14 +16,14 @@ public class PlayerHealth : Health
     public override void TakeDamage(GameObject hitter, float damage)
     {
         base.TakeDamage(hitter, damage);
-        DamageKnockbackAsync(hitter, damage);
+        DamageKnockbackAsync(hitter);
         UpdateHpBar();
     }
 
-    private async Task DamageKnockbackAsync(GameObject hitter, float damage)
+    private async Task DamageKnockbackAsync(GameObject hitter)
     {
         Vector3 direction = hitter.transform.position - transform.position;
-        await movement.DashAsync(40 * damage, 1f, direction.normalized);
+        await movement.DashAsync(250, 1f, direction.normalized);
     }
 
     public override void Regen()

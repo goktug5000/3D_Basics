@@ -21,6 +21,8 @@ public class KeyBindings
     [SerializeField] public static string KeyCode_Attack1 = "KeyCode_Attack1";
     [SerializeField] public static string KeyCode_Attack2 = "KeyCode_Attack2";
 
+    [SerializeField] public static string KeyCode_Interaction = "KeyCode_Interaction";
+
 
     [Header("Gamepad")]
     [SerializeField] public static string KeyCode_joy_Esc = "KeyCode_joy_Esc";

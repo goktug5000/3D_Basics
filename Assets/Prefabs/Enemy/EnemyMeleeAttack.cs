@@ -6,6 +6,7 @@ public class EnemyMeleeAttack : MonoBehaviour
     [SerializeField] private EnemyRoot myEnemyRoot;
 
     private EnemyMovement enemyMovement;
+    private EnemyHealth enemyHealth;
     private Animator enemyAnimator;
 
     [SerializeField] private float attackDisttance;
@@ -19,11 +20,15 @@ public class EnemyMeleeAttack : MonoBehaviour
     {
         enemyMovement = myEnemyRoot.enemyMovement;
         enemyAnimator = myEnemyRoot.holderAnimator;
+        enemyHealth = myEnemyRoot.enemyHealth;
     }
 
     void Update()
     {
-        CheckAttack();
+        if (!enemyHealth.dead)
+        {
+            CheckAttack();
+        }
     }
 
     async Task CheckAttack()
